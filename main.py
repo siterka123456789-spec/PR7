@@ -85,6 +85,15 @@ def main():
                 bank.show_all_accounts()
                 wait_and_clear()
             case 8:
+                acc_num = int(input("Введите номер счета: "))
+
+                account = bank.find_account(acc_num)
+
+                if account:
+                    account.show_history()
+                else:
+                    print("Счет не найден")
+            case 9:
                 print("Выход из программы...")
                 break
             case _:
